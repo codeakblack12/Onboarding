@@ -99,35 +99,6 @@ export default function Onboarding() {
     getTranscription()
   }
 
-  const getTranscriptionn = async () => {
-    //this.setState({ isFetching: true });
-    var url = "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyBgcbT0-pSIYVGoJHAUeQZIAwqH7mdWp88"
-    console.log("Getting Transcription")
-    try {
-      const info = await FileSystem.getInfoAsync(recordData);
-      //console.log(`FILE INFO: ${JSON.stringify(info)}`);
-      const uri = info.uri;
-      const formData = new FormData();
-      formData.append('file', {
-        uri,
-        type: 'audio/x-wav',
-        // could be anything 
-        //name: 'speech2text'
-      });
-      const response = await fetch(url, {
-        method: 'POST',
-        body: formData
-      });
-      const data = await response.json();
-      console.log(data)
-      //this.setState({ query: data.transcript });
-    } catch(error) {
-      console.log('There was an error', error);
-      stopRecording();
-    }
-    //this.setState({ isFetching: false });
-  }
-
   const getTranscription = async () => {
     var url = "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyBgcbT0-pSIYVGoJHAUeQZIAwqH7mdWp88"
     console.log("Getting Transcription")
