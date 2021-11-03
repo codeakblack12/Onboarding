@@ -29,13 +29,13 @@ export default firebase;
 import * as firebase from "firebase";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDt9A4vZUXpQbdW_gfQQluFZ6aTRf1qZd4",
-    authDomain: "onboard-29fbe.firebaseapp.com",
-    projectId: "onboard-29fbe",
-    storageBucket: "onboard-29fbe.appspot.com",
+    apiKey: "XXXXXX",
+    authDomain: "XXXXX",
+    projectId: "XXXXX",
+    storageBucket: "XXXX",
     messagingSenderId: "21815515898",
-    appId: "1:21815515898:web:6e2e6338be28739f180743",
-    measurementId: "G-R1K86HFJ9X"
+    appId: "1:2XXXXXX",
+    measurementId: "G-XXXX"
 };
 
 export default !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
