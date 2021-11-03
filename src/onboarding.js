@@ -100,7 +100,7 @@ export default function Onboarding() {
   }
 
   const getTranscription = async () => {
-    var url = "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyBgcbT0-pSIYVGoJHAUeQZIAwqH7mdWp88"
+    var url = "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AXXXBgcbT0-pXXXXGoJHAUeQXXXXmdWp88"
     console.log("Getting Transcription")
     try {
       const base64data = await FileSystem.readAsStringAsync(recordData, {encoding: FileSystem.EncodingType.Base64});
@@ -297,7 +297,7 @@ export default function Onboarding() {
   const viewConfig = useRef({viewAreaCoveragePercentThreshold: 50}).current
 
   const texttospeech = (text) => {
-    var url = 'https://texttospeech.googleapis.com/v1beta1/text:synthesize?key=AIzaSyBgcbT0-pSIYVGoJHAUeQZIAwqH7mdWp88'
+    var url = 'https://texttospeech.googleapis.com/v1beta1/text:synthesize?key=AIzaSyBgXXXpXXYVGoXXXXXAwqXXXWp88'
     var data = {
       'input':{
          'text': text
